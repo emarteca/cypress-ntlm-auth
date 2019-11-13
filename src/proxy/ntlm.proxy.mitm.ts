@@ -236,16 +236,16 @@ export class NtlmProxyMitm implements INtlmProxyMitm {
     let conn = net.connect({
       port: +targetHost.port,
       host: targetHost.hostname,
-      allowHalfOpen: true
+      //allowHalfOpen: true
     }, function () {
       conn.on('finish', () => {
         self._connectionContextManager.removeTunnel(socket);
-        socket.destroy();
+        //socket.destroy();
       });
-      socket.on('close', () => {
-        self._debug.log('client closed socket, closing tunnel to ', req.url);
-        conn.end();
-      });
+      //socket.on('close', () => {
+        //self._debug.log('client closed socket, closing tunnel to ', req.url);
+        //conn.end();
+      //});
 
       socket.write('HTTP/1.1 200 OK\r\n\r\n', 'UTF-8', function () {
         conn.write(head);
