@@ -1,0 +1,46 @@
+"Config API (ConfigServer deep tests) ""before all"" hook in ""Config API (ConfigServer deep tests)"""
+ConfigServer start should use a free port if undefined
+ConfigServer start should call init
+ConfigServer stop should close server listener
+ConfigServer stop should throw if close fail
+"Core server startup and shutdown ""before all"" hook for ""starting proxy should write portsFile"""
+"Proxy for HTTP host with NTLM ""before all"" hook: Start HTTP server and proxy for ""should handle authentication for GET requests"""
+"Proxy for HTTP host with NTLM ""after all"" hook: Stop HTTP server and proxy for ""should re-authentication after reconfiguration when required by server"""
+"Proxy for HTTP host without NTLM ""before all"" hook: Start HTTP server and proxy for ""should pass through GET requests for non NTLM host"""
+"Proxy for HTTP host without NTLM ""after all"" hook: Stop HTTP server and proxy for ""should pass through DELETE requests for non NTLM host"""
+"Proxy for multiple HTTP hosts with NTLM ""before all"" hook: Start HTTP server and proxy in ""Proxy for multiple HTTP hosts with NTLM"""
+"Proxy for multiple HTTP hosts with NTLM ""after all"" hook: Stop HTTP server and proxy in ""Proxy for multiple HTTP hosts with NTLM"""
+"Proxy for HTTP host with NTLM and upstream proxy ""before all"" hook: Start HTTP server and proxy for ""should handle authentication for GET requests"""
+"Proxy for HTTP host with NTLM and upstream proxy ""after all"" hook: Stop HTTP server and proxy for ""should return 401 for unconfigured host on DELETE requests"""
+"Proxy for HTTP host without NTLM and upstream proxy ""before all"" hook: Start HTTP server and proxy for ""should pass through GET requests for non NTLM host"""
+"Proxy for HTTP host without NTLM and upstream proxy ""after all"" hook: Stop HTTP server and proxy for ""should pass through DELETE requests for non NTLM host"""
+"Proxy for HTTP host without NTLM, upstream proxy + NO_PROXY ""before all"" hook: Start HTTP server for ""should not use upstream proxy for http host when only https upstream proxy is defined"""
+"Proxy for HTTP host without NTLM, upstream proxy + NO_PROXY ""after all"" hook: Stop HTTP server for ""should use upstream proxy with NO_PROXY google.com"""
+"Proxy for HTTPS host with NTLM ""before all"" hook: Start HTTPS server and proxy for ""should handle authentication for GET requests"""
+"Proxy for HTTPS host with NTLM ""after all"" hook: Stop HTTPS server and proxy for ""should re-authentication after reconfiguration when required by server"""
+"Proxy for HTTPS host without NTLM ""before all"" hook: Start HTTPS server and proxy for ""should pass through GET requests for non NTLM host"""
+"Proxy for HTTPS host without NTLM ""after all"" hook: Stop HTTPS server and proxy for ""should close SSL tunnels on quit"""
+"Proxy for multiple HTTPS hosts with NTLM ""before all"" hook: Start HTTP server and proxy for ""should handle authentication for POST requests to two hosts"""
+"Proxy for multiple HTTPS hosts with NTLM ""after all"" hook: Stop HTTP server and proxy for ""should handle authentication for POST requests to two hosts from one socket"""
+"Proxy for HTTPS host with NTLM and upstream proxy ""before all"" hook: Start HTTPS server and proxy for ""should handle authentication for GET requests"""
+"Proxy for HTTPS host with NTLM and upstream proxy ""after all"" hook: Stop HTTPS server and proxy for ""should return 401 for unconfigured host on DELETE requests"""
+"Proxy for HTTPS host without NTLM and upstream proxy ""before all"" hook: Start HTTPS server and proxy for ""should pass through GET requests for non NTLM host"""
+"Proxy for HTTPS host without NTLM and upstream proxy ""after all"" hook: Stop HTTPS server and proxy for ""should pass through DELETE requests for non NTLM host"""
+"Proxy for HTTPS host without NTLM, upstream proxy + NO_PROXY ""before all"" hook: Start HTTPS server for ""should use upstream proxy for https host when only http upstream proxy is defined"""
+"Proxy for HTTPS host without NTLM, upstream proxy + NO_PROXY ""after all"" hook: Stop HTTPS server for ""should use upstream proxy with NO_PROXY google.com"""
+Main shallow Core start pass
+Main shallow Core start fails
+NtlmProxyServer shallow start should use a free port if undefined
+NtlmProxyServer shallow start should call init
+NtlmProxyServer shallow stop should close server listener
+NtlmProxyServer shallow stop should throw if close throws
+"NTLM Proxy authentication ""before all"" hook for ""proxy without configuration shall not add authentication header"""
+"Startup shallow run should start proxy, call cypress run, return result and stop proxy"
+"Startup shallow run should throw if cypress run throws, and stop proxyMain"
+Startup shallow run should prepare proxy
+"Startup shallow open should start proxy, call cypress open, return result and stop proxy"
+"Startup shallow open should throw if cypress open throws, and stop proxyMain"
+Startup shallow open should prepare proxy
+Startup shallow open should use external proxy if available
+Startup shallow stopNtlmProxy should stop proxyMain
+Startup shallow stopNtlmProxy should not stop proxyMain if external proxy
